@@ -1,0 +1,128 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+.lolo {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.golo {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.limited-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* Number of lines to display */
+  -webkit-line-clamp: 4; /* Adjust the number of lines as needed */
+}
+p > img {
+  width: 60%;
+  height: 300px;
+  margin-left: 20%;
+  object-fit: cover;
+  object-position: center;
+}
+.buts > button {
+  margin: 0 10px;
+  background-color: rgb(217, 217, 217);
+  transition: all 0.4s ease;
+}
+.buts > button:hover {
+  background-color: #535cfd;
+  color: white;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.item-exit {
+  opacity: 1;
+}
+
+.item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+}
+textarea.w-md-editor-text-input {
+  height: 170px !important;
+  width: 100%;
+}
